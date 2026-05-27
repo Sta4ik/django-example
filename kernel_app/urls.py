@@ -4,5 +4,7 @@ from kernel_app.views import *
 
 urlpatterns = [
     path('', main_page),
-    path('home', main_page)
+    path('home', main_page),
+    path('news', news_page),
+    path('new', create_article)
 ]
