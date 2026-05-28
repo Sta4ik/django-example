@@ -109,7 +109,7 @@
           <div class="success-message">{{ message }}</div>
         {% endif %}
         
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form }}
             <button type="submit">Создать статью</button>
