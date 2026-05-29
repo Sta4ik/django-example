@@ -9,41 +9,15 @@
 </head>
 <body>
     <div class="wrapper">
+        {% for news in newsList%}
         <div class="news-container">
-            <img src="{% static 'images\temp.jpg' %}" class="img">
+            <img src="data:image/jpeg;base64,{{ news.imageBase }}" class="img">
             <div class="info-container">
-                <h1>Заголовок</h1>
-                <p>Что-то там jfkdhgkjdfhgfdjkghfdkjgfjhuigtreogjhfudljsghilrtyiushgfiosgu9pertu90w678w5ytfoiasyhgfdngfdskljgdfiuto8594w67yoosighudfhsgtrywyre8uwyt589ygu</p>
+                <h1>{{ news.article_title }}</h1>
+                <p>{{ news.article_annotation }}</p>
             </div>
         </div>
-          <div class="news-container">
-            <img src="{% static 'images\temp.jpg' %}" class="img">
-            <div class="info-container">
-                <h1>Заголовок</h1>
-                <p>Что-то там</p>
-            </div>
-        </div>
-        <div class="news-container">
-            <img src="{% static 'images\temp.jpg' %}" class="img">
-            <div class="info-container">
-                <h1>Заголовок</h1>
-                <p>Что-то там</p>
-            </div>
-        </div>
-        <div class="news-container">
-            <img src="{% static 'images\temp.jpg' %}" class="img">
-            <div class="info-container">
-                <h1>Заголовок</h1>
-                <p>Что-то там</p>
-            </div>
-        </div>
-        <div class="news-container">
-            <img src="{% static 'images\temp.jpg' %}" class="img">
-            <div class="info-container">
-                <h1>Заголовок</h1>
-                <p>Что-то там</p>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </body>
 </html>
