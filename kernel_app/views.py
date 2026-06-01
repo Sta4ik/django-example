@@ -1,5 +1,5 @@
 import base64
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from kernel_app.models import Article, Article_Picture
 from kernel_app.forms import New_Article

@@ -10,13 +10,13 @@
 <body>
     <div class="wrapper">
         {% for news in newsList%}
-        <div class="news-container">
+        <a href="news/{{ news.article_id }}" class="news-container">
             <img src="data:image/jpeg;base64,{{ news.imageBase }}" class="img">
             <div class="info-container">
                 <h1>{{ news.article_title }}</h1>
                 <p>{{ news.article_annotation }}</p>
             </div>
-        </div>
+        </a>
         {% endfor %}
     </div>
 </body>
