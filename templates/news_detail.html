@@ -1,13 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/news_detail.css' %}">
     <title>Новость</title>
 </head>
 <body>
     <h1>{{ news.article_title }}</h1>
     <p>{{ news.article_text }}</p>
+    {% for picture in picturesList %}
+        <img src="data:image/jpeg;base64,{{ picture }}" class="img">
+    {% endfor %}
     <p>Опубликовано: {{ news.creation_date }}</p>
 </body>
 </html>

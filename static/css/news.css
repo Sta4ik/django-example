@@ -57,3 +57,31 @@ p{
     max-height: 120px;
     overflow-y: auto;
 }
+
+.headerWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.addArticle{
+    width: 100%;
+    padding: 12px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addArticle:hover {
+    background-color: #1976D2;
+    transform: scale(1.03);
+}
+
+#wrapp{
+    margin-top: 20px;
+}

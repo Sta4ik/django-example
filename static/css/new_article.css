@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.register-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+.addBut {
+    width: 100%;
+    padding: 12px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+.addBut:hover {
+    background-color: #1976D2;
+    transform: scale(1.03);
+}
+
+.error-message {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #d32f2f;
+}
+
+.success-message {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #388e3c;
+}
+
+a#login {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a#login:hover {
+    text-decoration: underline;
+}
+
+#wrapp {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.backBut {
+    width: 100%;
+    background-color: #f55656;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.backBut:hover {
+    background-color: #d82a2a;
+    transform: scale(1.03);
+}

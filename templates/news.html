@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="{% static 'css/news.css' %}">
     <title>Document</title>
 </head>
+<header>
+    <div class="headerWrapper">
+        <h2>Новости</h2>
+        <a href="{% url 'new' %}" id="wrapp"><button class="addArticle">Создать статью</button></a>
+    </div>
+</header>
 <body>
     <div class="wrapper">
         {% for news in newsList%}
