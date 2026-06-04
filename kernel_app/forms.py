@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
 
 class MultipleFileInput(forms.ClearableFileInput):
     allow_multiple_selected = True
@@ -22,3 +23,7 @@ class New_Article(forms.Form):
     article_preview_image = forms.ImageField(label="Превью")
     article_text = forms.CharField(widget=forms.TextInput, label="Текст статьи")
     article_pictures = MultipleFileField(label="Картинки в статье")
+
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(label='Имя пользователя')
+    password = forms.CharField(label='Пароль', widget=forms.PasswordInput)

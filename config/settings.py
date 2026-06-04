@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)#g=34_c0r-u#pmhrqvc^+oy!09z4(^l+kge92#iuc0(#0hz6!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -118,3 +118,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'login'
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_COOKIE_AGE = 180

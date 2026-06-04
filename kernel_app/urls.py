@@ -9,5 +9,7 @@ urlpatterns = [
     path('news', news_page, name='news'),
     path('new', create_article, name='new'),
     path('news/<str:article_id>/', article_page),
-    path('404', page404)
+    path('404', page404),
+    path('login', login_page, name='login'),
+    path('logout', logout_page)
 ]
