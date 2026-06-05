@@ -11,5 +11,6 @@ urlpatterns = [
     path('news/<str:article_id>/', article_page),
     path('404', page404),
     path('login', login_page, name='login'),
-    path('logout', logout_page)
+    path('logout', logout_page),
+    path('registration', registration_page, name='registration')
 ]

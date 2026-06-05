@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 class MultipleFileInput(forms.ClearableFileInput):
     allow_multiple_selected = True
@@ -27,3 +27,6 @@ class New_Article(forms.Form):
 class LoginForm(AuthenticationForm):
     username = forms.CharField(label='Имя пользователя')
     password = forms.CharField(label='Пароль', widget=forms.PasswordInput)
+
+class RegistrationForm(UserCreationForm):
+    pass

@@ -1,7 +1,7 @@
 import base64
 from django.shortcuts import render, get_object_or_404, redirect
 from kernel_app.models import Article, Article_Picture
-from kernel_app.forms import New_Article, LoginForm
+from kernel_app.forms import New_Article, LoginForm, RegistrationForm
 from random import randint
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate, logout
@@ -68,3 +68,14 @@ def login_page(request):
 def logout_page(request):
     logout(request)
     return redirect('login')
+
+def registration_page(request):
+    form = RegistrationForm(data=request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            newUser = form.save(commit=False)
+            newUser.set_password(form.cleaned_data['password1'])
+            newUser.save()
+    else:
+        form = RegistrationForm()
+    return render(request, 'registration.html', {'form': form})
